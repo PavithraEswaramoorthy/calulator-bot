@@ -1,0 +1,36 @@
+from random import randint
+def greet_random():
+  greeting=['hi','Hey','vanakkam','Hello','Howdy','yo','namasthae','Konnichiwa','annyeonghaseyo','Nǐ hǎo']
+  return(greeting[randint(0,len(greeting)-1)])
+greetings=greet_random()
+print(greetings)  
+
+greet_random()
+quit_msg=['quit','bye','exit','see u later','close','catch u later']
+print(greet_random(),",I am an catbot.I will calculate whatever u say")
+while True:
+  msg=input()
+  if msg in quit_msg:
+    break
+  else:
+    split_msg=msg.split()
+    if(split_msg[0]=='add'):
+      p1=int(split_msg[1])
+      p2=int(split_msg[2])
+      print(p1+p2)
+    elif(split_msg[0]=="mul"):
+      p1=int(split_msg[1])
+      p2=int(split_msg[2])
+      print(p1*p2)
+    elif(split_msg[0]=='sub'):
+      p1=int(split_msg[1])
+      p2=int(split_msg[2])
+      print(p1-p2)
+    elif(split_msg[0]=='div'):
+      p1=int(split_msg[1])
+      p2=int(split_msg[2])
+      print(p1/p2)
+    elif(split_msg[0]=="squaring"):
+      p1=int(split_msg[1])
+      print(p1*p1)
+     
